@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { LoginComponente } from "../style/style";
+// import React, { Component } from 'react';
 
 export default function Login(){
     const[usuario, setUsuario] = useState({
@@ -12,7 +14,7 @@ export default function Login(){
     }
 
 
-    const logar = async () =>{
+    const logar = async (e) =>{
         e.preventDefault()
 
         const requestOptions = {
@@ -22,18 +24,30 @@ export default function Login(){
         }
  
     const response = await fetch(
-        "http://localhost:8080/ControleAcesso/rest/login/", requestOptions
+        "http://localhost:8080/ControleAcesso/rest/login/", 
+        requestOptions
     );
 
+    const data =  await response.json()
+
+    if(data.login){
+        sessionStorage.setItem("usuario-validado", data.login)
+    }
+
+    if(data){
+        window.location = "/home"
+    } else{
+        window.location = "/"
+    }
     };
 
     return(
-        <>
-            <h1>LOGIN</h1>
+        <LoginComponente>
+            <h1>Menu Login</h1>
             <div>
-                <form onSubmit="">
+                <form onSubmit={logar}>
                     <fieldset>
-                        <legend>Faca seu Login</legend>
+                        <legend>Seja Bem vindo a Pagina de Login </legend>
                         <div>
                             <label>Usuario</label>
                             <input type="text" name="login" placeholder="Login" value={usuario.login} onChange={handleChange}/>
@@ -48,7 +62,7 @@ export default function Login(){
                     </fieldset>
                 </form>
             </div>
-        </>
+        </LoginComponente>
     )
 
 }

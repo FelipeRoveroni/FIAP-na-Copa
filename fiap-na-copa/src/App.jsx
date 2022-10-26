@@ -1,13 +1,15 @@
 import React from "react";
 import Menu from "./components/Menu";
 import MainRouts from "./routes/MainRoutes";
+import { AppComponente } from "./style/style";
+import './App.css'
 
 
 export default function App() {
     return(
       <>
-        <h1>CONTROLE ACESSO</h1>
-        <Menu/>
+        <AppComponente>
+          <h1>FIAP na COPA</h1><Menu/></AppComponente>
         <MainRouts/>
       </>
     );
