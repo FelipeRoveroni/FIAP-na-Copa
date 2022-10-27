@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 export const LoginComponente = styled.section`
     border: 5px solid black;
     border-radius: 10px;
@@ -62,6 +63,8 @@ export const MenuComponente = styled.header`
         
     }
 `;
+
+
 
 
 

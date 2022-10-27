@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { LoginComponente } from "../style/style";
-// import React, { Component } from 'react';
 
 export default function Login(){
     const[usuario, setUsuario] = useState({
         login: "",
         senha: "",
+        nome: '',
+        rm: '',
     });
 
     const handleChange = (e) =>{

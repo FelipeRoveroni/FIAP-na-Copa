@@ -14,13 +14,13 @@ export default function Menu(){
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>Login</Link>
-                    </li>
-                    <li>
                         <Link to='/home'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/produto'>Figurinhas Internacionais</Link>
+                        <Link to='/FigurinhasNac'>Figurinhas Nacionais</Link>
+                    </li>
+                    <li>
+                        <Link to='FigurinhasInt'>Figurinhas Internacionais</Link>
                     </li>
                     <li>
                         <button onClick={logout}>{usuario} Login</button>
