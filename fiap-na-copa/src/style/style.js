@@ -3,11 +3,12 @@ import styled from "styled-components";
 
 
 export const LoginComponente = styled.section`
+    /* min-height: 100vh; */
     border: 5px solid black;
     border-radius: 10px;
     color: black;
     font-size: 1.2rem;
-    margin: 1rem;
+    margin:  18.5rem 0rem;
     padding: 1rem 1rem;
     display: grid;
     h1{
@@ -59,11 +60,23 @@ export const MenuComponente = styled.header`
             box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
             -webkit-transition: all 150ms ease-in-out;
             transition: all 150ms ease-in-out;
+            padding: 10px 20px;
+            :hover{
+                box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+            }
         }
         
     }
 `;
 
+export const FooterComponente = styled.section`
+    background: rgb(0,156,59);
+    background: linear-gradient(90deg, rgba(0,156,59,1) 0%, rgba(255,223,0,1) 20%, rgba(0,39,118,1) 40%, rgba(254,254,254,1) 50%, rgba(5,43,115,1) 60%, rgba(255,223,0,1) 80%, rgba(0,156,59,1) 100%);
+    color: #FFF;
+    width: 100%;
+    height: 100px;    
+    text-align: start;
+`;
 
 
 
