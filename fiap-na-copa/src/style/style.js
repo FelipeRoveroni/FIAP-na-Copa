@@ -1,5 +1,23 @@
 import styled from "styled-components";
 
+export const TituloComponente = styled.h1`
+    margin: 30px 0 40px 0;
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+`;
+
+export const Paragrafo = styled.p`
+    margin: 1em 2em 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3em;
+    
+`;
+
+
 
 
 export const LoginComponente = styled.section`

@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { MenuComponente} from "../style/style";
 
 export default function Menu(){
+
+    const logout = ()=>{
+        sessionStorage.removeItem("usuario-validado")
+        window.location = '/'
+    }
+
+
     const usuario = sessionStorage.getItem("usuario-validado");
+    
     return(
         <MenuComponente>
             <nav>

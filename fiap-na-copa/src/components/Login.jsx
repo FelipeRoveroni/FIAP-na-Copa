@@ -25,7 +25,7 @@ export default function Login(){
         }
  
     const response = await fetch(
-        "http://localhost:8080/ControleAcesso/rest/login/", 
+        "http://localhost:8080/fiap_na_copa/rest/login/", 
         requestOptions
     );
 
@@ -48,7 +48,7 @@ export default function Login(){
             <div>
                 <form onSubmit={logar}>
                     <fieldset>
-                        <legend>Seja Bem vindo a Pagina de Login </legend>
+                        <legend>Seja Bem vindo a Pagina de Login. Utilize o nome e senha fornecidos na API java para entrar </legend>
                         <div>
                             <label>Usuario</label>
                             <input type="text" name="login" placeholder="Login" value={usuario.login} onChange={handleChange}/>
@@ -58,7 +58,7 @@ export default function Login(){
                             <input type="password" name="senha" placeholder="Senha" value={usuario.senha} onChange={handleChange}/>
                         </div>
                         <div>
-                            <button>Logar</button>
+                            <button type="submit">Logar</button>
                         </div>
                     </fieldset>
                 </form>
